@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PreferenceActivityTest</string>
+    <string name="checkbox_key">check_box</string>
+    <string name="title1"><font color="blue">Ln-line preference</font></string>
+    <string name="title2"><font color="blue">Dialog-based preferences</font></string>
+    <string name="title3"><font color="blue">Lanuch preferences</font></string>
+    <string name="title4"><font color="blue">Preference attribute</font></string>
+</resources>

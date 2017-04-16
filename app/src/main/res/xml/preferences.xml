@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/title1">
+        <CheckBoxPreference
+            android:key="@string/checkbox_key"
+            android:defaultValue="true"
+            android:summary="This is a checkbox"
+            android:title="CheckBox Preference"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title2">
+
+        <EditTextPreference
+            android:key="edittext_key"
+            android:defaultValue="xiongwenkang"
+            android:summary="An example that uses a text dialog"
+            android:title="Edit text preferences"
+            />
+
+        <ListPreference
+            android:key="list_key"
+            android:summary="An example that uses a list dialog"
+            android:title="List preferences"
+            android:entries="@array/list_preference"
+            android:entryValues="@array/list_preference"
+            android:dialogTitle="Choose One"
+            />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title3">
+
+        <Preference
+            android:key="another_screen"
+            android:title="Screen Preference"
+            android:summary="Shows another screen of preference">
+
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="edu.sqchen.preferenceactivitytest"
+                android:targetClass="edu.sqchen.preferenceactivitytest.ScreenPreference"
+                />
+        </Preference>
+
+        <Preference
+            android:key="intent_web"
+            android:title="Intent preference"
+            android:summary="Launches an activity from a intent">
+
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="http://sports.qq.com/nba"/>
+
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title4">
+
+        <CheckBoxPreference
+            android:key="parent_checkbox_key"
+            android:title="Parent checkbox preference"
+            android:summary="This is visually a parent"
+            android:defaultValue="false"/>
+
+        <CheckBoxPreference
+            android:key="child_checkbox_key"
+            android:title="Child checkbox preference"
+            android:summary="This is visually a child"
+            android:defaultValue="false"
+            android:dependency="parent_checkbox_key"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>
